@@ -1,0 +1,19 @@
+[{
+    "modid": "ModTill",
+    "name": "Modified Tilling",
+    "description": "A testing ground for modified Minecraft tools and machines",
+    "version": "1.0",
+    "mcversion": "1.7.10-10",
+    "url": "",
+    "updateUrl": "",
+    "authors": [ "lucky_number_13"],
+    "credits": "Authored by lucky_number_13, with some guidance from Pahimar's tutorials",
+    "logoFile": "",
+    "screenshots": [ ],
+    "parent": "",
+    "requiredMods": [ "Forge" ],
+    "dependencies": [ ],
+    "dependants": [  ],
+    "useDependencyInformation": false
+}
+]

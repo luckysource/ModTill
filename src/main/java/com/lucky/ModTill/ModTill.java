@@ -1,15 +1,16 @@
 package com.lucky.ModTill;
 
-import configuration.ConfigurationHandler;
-import proxy.IProxy;
-import reference.Reference;
+import com.lucky.ModTill.handler.ConfigurationHandler;
+import com.lucky.ModTill.proxy.IProxy;
+import com.lucky.ModTill.reference.Reference;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid= Reference.MOD_ID, name = Reference.MOD_NAME, version= Reference.VERSION)
+@Mod(modid= Reference.MOD_ID, name = Reference.MOD_NAME, version= Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class ModTill {
 	
 	@Mod.Instance(Reference.MOD_ID)

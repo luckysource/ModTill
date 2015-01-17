@@ -1,9 +1,8 @@
-package com.lucky.ModTill;
 
-import com.lucky.ModTill.handler.ConfigurationHandler;
-import com.lucky.ModTill.proxy.IProxy;
-import com.lucky.ModTill.reference.Reference;
 
+import handler.ConfigurationHandler;
+import proxy.IProxy;
+import reference.Reference;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;

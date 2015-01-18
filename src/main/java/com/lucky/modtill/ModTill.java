@@ -1,8 +1,12 @@
 
 
+import init.ModBlocks;
+import init.ModItems;
 import handler.ConfigurationHandler;
 import proxy.IProxy;
 import reference.Reference;
+import utility.LogHelper;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -24,15 +28,22 @@ public class ModTill {
 		//mod config - user can tweak settings
 		//item and block initialize
 		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+		LogHelper.info("Pre Initialisation Complete!");
+		
+		ModItems.init();
+		ModBlocks.init();
 	}
 	
 	@Mod.EventHandler
-	public void preInit(FMLInitializationEvent event){
+	public void init(FMLInitializationEvent event){
 		//register GUI, tile entities, crafting recipes
+		LogHelper.info("Initialisation Complete!");
 	}
 	
 	@Mod.EventHandler
-	public void preInit(FMLPostInitializationEvent event){
+	public void postInit(FMLPostInitializationEvent event){
 		//wrap anything up after other mods have initialized
+		LogHelper.info("Post Initialisation Complete!");
 	}
 }

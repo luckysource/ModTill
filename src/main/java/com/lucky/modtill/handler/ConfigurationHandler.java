@@ -10,7 +10,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 public class ConfigurationHandler {
 	
 	public static Configuration configuration;
-	public static boolean testValue = false;
+	public static boolean configValue = false;
 	
 	
 	public static void init(File configFile){
@@ -24,26 +24,11 @@ public class ConfigurationHandler {
 	
 
 	
-	public static void loadConfiguration(){
-		testValue = configuration.getBoolean("configValue", Configuration.CATEGORY_GENERAL, false, "This is an example config value");
-		
-		boolean configValue;
-		try {
-			// Load the configuration file
-			configuration.load();
-			// Read in properties from configuration file
-			configValue = configuration.get(Configuration.CATEGORY_GENERAL,"configValue",true,"This is an example config value").getBoolean(true);
-		}
-		catch (Exception e){
-			// Log the exception
-		}
-		finally{
-			// Save the configuration file 
-			
+	private static void loadConfiguration(){
+		configValue = configuration.getBoolean("Test configuration value", Configuration.CATEGORY_GENERAL, false, "This is an example config value");		
 			if(configuration.hasChanged()){
 				configuration.save();
 			}
-		}
 	}
 	
 	

@@ -1,0 +1,7 @@
+itemGroup.modtill=Modified Tilling
+
+#Item Localizations
+item.modtill:lookingGlass.name=Looking Glass
+
+#Block Localizations
+tile.modtill:laserFence.name=Laser Fence
